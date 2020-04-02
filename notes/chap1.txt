@@ -1,0 +1,34 @@
+Optional and named arguments
+    def function_name(size, kib=True)
+      If value is specified in function def, it is optional. you can call a function with named params in any order. 
+      However once a named param is written, all further arguments must also be named
+if there is no explicit return in a function, it returns None (python null value)
+
+''' Triple quotes indicate multi lined string
+docstring must be the first thing after function definition
+
+import humansize
+print(humansize.approximate_size(4096, True))
+print(humansize.approximate_size.__doc__)
+
+Everything in python is an object and can have attributes and methods. All functions have a built-in attribute __doc__
+Functions are first class objects in python
+Modules are first class objects
+
+Code blocks specified by indentation, it needs to be consistent, no parantheises needed around if expressions
+
+try, except blocks  and raise. Python functions dont declare the exceptions they might raise
+
+try:
+  import chardet
+except ImportError:
+  chardet = None
+
+You cant reference a variable which hasnt been assigned a value
+
+if __name__ == '__main__':
+If you import a module, then its __name__ is the module's file name
+If run directly, it will be __main__
+
+
+ 
