@@ -31,4 +31,20 @@ If you import a module, then its __name__ is the module's file name
 If run directly, it will be __main__
 
 
+os.getcwd()
+os.chdir('/home/user/folder1')
+os.path.join('/home/user/folder1','file') //can add trailing slash
+os.path.expanduser('~')  home directory
+ can combine path.join with expanduser
+(dir,filename) = os.path.split(path)
+(name,extension) = os.path.splitext(filename)
+os.path.realpath('file') // full path
+
+import glob
+glob.glob(’*older/*xml’)  [] of files matching the pattern
+metadata = os.stat('feed.xml')
+metadata.st_mtime // seconds since unix epoch
+import time
+time.localtime(metadata.st_mtime) will return a struct with year month etc
+
  

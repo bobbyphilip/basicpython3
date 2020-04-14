@@ -1,0 +1,17 @@
+list = [3,1,6,2]
+[elem*2 for elem in list] // creates a new list with each element double that in the original list
+[os.path.realpath(f) for f in glob.glob('*.xml')] // returns a list with full name and paths of xmls in the current directory
+[f for f in glob.glob('*.py') if os.stat(f).st_size > 6000] // filters the list
+[(humansize.approximate_size(os.stat(f).st_size), f) for f in glob.glob('*.xml')] //list of tuples with file size and name
+
+
+metadata_dict = {f:os.stat(f) for f in glob.glob('*test*.py')}  f is the key, os_stat(f) is the value. Create a dictionary
+
+a_dict = {'a': 1, 'b': 2, 'c': 3}
+rev_dict = {v:k for k,v in a_dict.items()}// reverses key and values. Values have to be immutable
+
+a_set = set(range(10))
+{x for x in a_set if x % 2 == 0}
+{2,6,0,8}
+
+
