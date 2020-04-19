@@ -1,0 +1,52 @@
+An immutable sequence of Unicode characters is called a string
+s = '深入 Python'
+len(s)  9
+s + ' 3'  '深入 Python3'
+s[3] P
+Can use ' and " ''' (docstring)
+
+String format()
+ " this is my name {0} and this is my height {1}".format(namevar,heightvar)
+ 
+Compound field names
+ si_suffixes = ['KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB']
+ '1000{0[0]} is 1{0[1]}'format(si_suffixes)  1000KB is 1MB
+ {0} index in the part in the formt() [0] the index in the list 
+can use this with dictionaries,modules, class
+
+'{0:.1f} {1}'.format(698.24, 'GB')  698.2 GB
+
+s.splitlines() .lower() count('f')
+
+s.split('&')  splits into a list with the tokeniser as &
+list= ['user=pilgrim', 'database=master', 'password=PapayaWhip']
+  [ elem.split('=',1) for elem in list if "=" in elem]  
+     iterates list element with = in them
+     splits each element on =
+     1 means that we do only 1 split even if more than 1 = in the string
+     this generates a list of lists
+
+[['user', 'pilgrim'], ['database', 'master'], ['password', 'PapayaWhip']]
+a_dict = dict(a_list_of_lists)
+{'password': 'PapayaWhip', 'user': 'pilgrim', 'database': 'master'}
+
+string can be sliced like a list  str[3:-3] from character at index 3 to the end all but three
+
+
+
+An immutable sequence of numbers-between-0-and-255 is called a bytes object.
+by = b'abcd\x65'
+ b'abcde'
+ type(by) class bytes
+ len(by) 5
+ by+=b'\xff'
+ b'abcde\xff'
+ len is now 6
+ by[0] 97
+ it is immutable, can assign by[0]
+ convert to a bytearray  by bytearray(by) and then assigning elem
+ cant mix strings and bytes
+
+ byte has method decode('ascii')  decode the bytes with the ascii encoding
+
+ str has method encode('utf-8') which will create a byte
