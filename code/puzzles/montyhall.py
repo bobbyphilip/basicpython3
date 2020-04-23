@@ -15,7 +15,7 @@ def main():
     randomWins =0
     totalNumberDoors = 3 
     maxDoorNumber  = totalNumberDoors -1
-    for i in range(totalTries):
+    for _ in range(totalTries):
         doors =[0 for x in range(totalNumberDoors)]
         prizeDoor = randint(0,maxDoorNumber)
         goatDoorNumbers =[0 for x in range(maxDoorNumber)]
@@ -48,10 +48,6 @@ def main():
             randomWins +=1
 
     print("Win% with switching ", switchWins*100/totalTries, " Win% by sticking to the same door ", sameWins*100/totalTries, "Win% by randomly choosing a door  ",randomWins*100/totalTries,"%")
-
-    
-
-
 
 # This is the standard boilerplate that calls the main() function.
 if __name__ == '__main__':
