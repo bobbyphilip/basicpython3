@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 import sys
 import email
-import log
 import base64
 import datetime
+import log
 from email import policy
 
 logger = log.setup_logger("Mail")
