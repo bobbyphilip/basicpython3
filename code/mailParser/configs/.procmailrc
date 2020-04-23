@@ -1,0 +1,4 @@
+VERBOSE=on
+LOGFILE=/var/log/mail_parser/procmail.log
+:0:
+|<PATH>/mail_arrived.py
