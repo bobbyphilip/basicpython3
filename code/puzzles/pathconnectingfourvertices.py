@@ -9,18 +9,20 @@ def solve():
    D---------C
         8 
 
-    Shortest Path connecting all 4 points of square of side 8. Total length should be less than 22
-    '''
-    SEMIWIDTH = 4
-    HEIGHT = 8
+    Path connecting all 4 points of square of side 8. Total length should be less than 22
+    Answer will be a diagonal from each vertice to a line parallel to AB and CD and then potentially a line connecting these diagonals
 
-    wlist = [ x * 0.1 for x in range(1, SEMIWIDTH*10+1)]
+    '''
+    HEIGHT = 8
+    semiwidth = int(HEIGHT/2)
+
+    wlist = [ x * 0.1 for x in range(1, semiwidth*10+1)]
     hlist = [ x * 0.1 for x in range(1, HEIGHT*10+1)]
     res = [100,0,0,0]
     for h1 in hlist:
         h2 = HEIGHT-h1
         for w in wlist:
-            connect = SEMIWIDTH-w
+            connect = semiwidth-w
             hyp1 =(math.sqrt((h1*h1)+(w*w)))
             hyp2 =(math.sqrt((h2*h2)+(w*w)))
 
